@@ -6,22 +6,23 @@ Release:	6
 Copyright:	non-free
 Group:		Utilities/Printing
 Group(pl):	Narzêdzia/Drukowanie
-Source:		ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
+Source0:	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
 Patch0:		psutils-Makefile.patch
-# Patch1 bases on:
-# ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
+# Patch1 bases on:	
+# ftp:		//jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:		psutils-misc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This archive contains some utilities for manipulating PostScript documents.
-Page selection and rearrangement are supported, including arrangement into
-signatures for booklet printing, and page merging for n-up printing.
+This archive contains some utilities for manipulating PostScript
+documents. Page selection and rearrangement are supported, including
+arrangement into signatures for booklet printing, and page merging for
+n-up printing.
 
 %description -l pl 
-PSutils zawiera programy pomagaj±ce manipulowaæ plikami PostScript, wybieraæ
-strony przeznacznone do wydruku, ich kolejno¶æ, uk³ad. Pozwala tak¿e na
-³±czenie ró¿nych plików PostScript w ca³o¶æ.
+PSutils zawiera programy pomagaj±ce manipulowaæ plikami PostScript,
+wybieraæ strony przeznacznone do wydruku, ich kolejno¶æ, uk³ad.
+Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 
 %prep
 %setup -q -n %{name}
