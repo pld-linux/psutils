@@ -35,7 +35,7 @@ make -f Makefile.unix
 rm -rf $RPM_BUILD_ROOT
 make -f Makefile.unix DESTDIR=$RPM_BUILD_ROOT install
 
-gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README LICENSE
 
 %clean
@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc {README,LICENSE}.gz
 %attr(755,root,root) /usr/bin/*
-/usr/man/man1/*
+%{_mandir}/man1/*
 /usr/share/psutils
 
 %changelog
