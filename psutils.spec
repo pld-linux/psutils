@@ -41,14 +41,13 @@ rm -rf $RPM_BUILD_ROOT
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
 
-gzip -9nf README LICENSE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc *.gz
+%doc README LICENSE
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %lang(es) %{_mandir}/es/man1/*
