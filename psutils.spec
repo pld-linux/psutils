@@ -23,7 +23,7 @@ n-up printing.
 
 %description -l pl
 PSutils zawiera programy pomagaj±ce manipulowaæ plikami PostScript,
-wybieraæ strony przeznacznone do wydruku, ich kolejno¶æ, uk³ad.
+wybieraæ strony przeznaczone do wydruku, ich kolejno¶æ, uk³ad.
 Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 
 %prep
