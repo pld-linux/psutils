@@ -2,15 +2,15 @@ Summary:	PostScript Utilities
 Summary(pl):	Narzêdzia do PostScriptu 
 Name:		psutils
 Version:	1.17
-Release:	6
-Copyright:	non-free
-Group:		Utilities/Printing
-Group(pl):	Narzêdzia/Drukowanie
+Release:	11
+License:	Distributable
+Group:		Applications/Printing
+Group(de):	Applikationen/Drucken
+Group(pl):	Aplikacje/Drukowanie
 Source0:	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
-Patch0:		psutils-Makefile.patch
-# Patch1 bases on:	
-# ftp:		//jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
-Patch1:		psutils-misc.patch
+Patch0:		%{name}-Makefile.patch
+# Patch1 derived from ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
+Patch1:		%{name}-misc.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -34,20 +34,18 @@ Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
  
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} -f Makefile.unix \
+%{__make} -f Makefile.unix install \
 	DESTDIR=$RPM_BUILD_ROOT \
-	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
-	install
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
-gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
-	README LICENSE
+gzip -9nf README LICENSE
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {README,LICENSE}.gz
+%doc *.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_datadir}/%{name}
