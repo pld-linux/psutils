@@ -7,7 +7,7 @@ Copyright:   non-free
 Group:       Utilities/Printing
 Source:      ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
 Patch0:      psutils-Makefile.patch
-# Ptch1 bases on:
+# Patch1 bases on:
 # ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:      psutils-misc.patch
 BuildRoot:   /tmp/%{name}-%{version}-root
