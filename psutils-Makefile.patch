@@ -23,7 +23,7 @@
  
  CC = gcc
 -CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX -O -Wall
-+CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(RPM_OPT_FLAGS) -Wall
++CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(OPT) -Wall
  
  BIN = psbook psselect pstops epsffit psnup \
  	psresize
