@@ -46,7 +46,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,LICENSE}.gz
 %attr(755,root,root) /usr/bin/*
 %{_mandir}/man1/*
-/usr/share/psutils
+%{_datadir}/psutils
 
 %changelog
 * Thu Apr 28 1999 Piotr Czerwiñski <pius@pld.org.pl>
@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
   [1.17-4]
 - added pl translation,
 - more detailed %attr for binaries,
-- moved some files from /usr/lib/psutils to /usr/share/psutils.
+- moved some files from /usr/lib/psutils to %{_datadir}/psutils.
 
 * Tue Jun 23 1998 Peter Soos <sp@osb.hu>
   [1.17-3]
