@@ -2,7 +2,7 @@ Summary:	PostScript Utilities
 Summary(pl):	NarzÍdzia do PostScriptu 
 Name:		psutils
 Version:	1.17
-Release:	15
+Release:	16
 License:	distributable
 Group:		Applications/Printing
 Group(cs):	Aplikace/Tisk
@@ -19,7 +19,9 @@ Group(ru):	“…Ãœ÷≈Œ…—/≈ﬁ¡‘ÿ
 Group(sl):	Programi/Tiskanje
 Group(sv):	Till‰mpningar/Utskrift
 Source0:	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
-Source1:	%{name}-non-english-man-pages.tar.bz2
+# Source0-md5:	b161522f3bd1507655326afa7db4a0ad
+Source1:	http://www.mif.pg.gda.pl/homepages/ankry/man-PLD/%{name}-non-english-man-pages.tar.bz2
+# Source1-md5:	1e7a4663e9b535e102e6242ec1d5c875
 Patch0:		%{name}-Makefile.patch
 # Patch1 derived from ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:		%{name}-misc.patch
