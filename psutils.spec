@@ -11,7 +11,7 @@ Patch0:		psutils-Makefile.patch
 # Patch1 bases on:
 # ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:		psutils-misc.patch
-BuildRoot:	/tmp/%{name}-%{version}-root
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 This archive contains some utilities for manipulating PostScript documents.
