@@ -1,16 +1,17 @@
-Summary:     PostScript Utilities
-Summary(pl): Narzêdzia do PostScriptu 
-Name:        psutils
-Version:     1.17
-Release:     4
-Copyright:   non-free
-Group:       Utilities/Printing
-Source:      ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
-Patch0:      psutils-Makefile.patch
+Summary:	PostScript Utilities
+Summary(pl):	Narzêdzia do PostScriptu 
+Name:		psutils
+Version:	1.17
+Release:	5
+Copyright:	non-free
+Group:		Utilities/Printing
+Group(pl):	Narzêdzia/Drukowanie
+Source:		ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
+Patch0:		psutils-Makefile.patch
 # Patch1 bases on:
 # ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
-Patch1:      psutils-misc.patch
-BuildRoot:   /tmp/%{name}-%{version}-root
+Patch1:		psutils-misc.patch
+BuildRoot:	/tmp/%{name}-%{version}-root
 
 %description
 This archive contains some utilities for manipulating PostScript documents.
@@ -28,23 +29,35 @@ strony przeznacznone do wydruku, ich kolejno¶æ, uk³ad. Pozwala tak¿e na
 %patch1 -p1
 
 %build
-make -f Makefile.unix
+make -f Makefile.unix RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
  
 %install
 rm -rf $RPM_BUILD_ROOT
 make -f Makefile.unix DESTDIR=$RPM_BUILD_ROOT install
 
+gzip -9nf $RPM_BUILD_ROOT/usr/man/man1/* \
+	README LICENSE
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
-%defattr(644, root, root, 755)
-%doc README LICENSE
-%attr(755, root, root) /usr/bin/*
-%attr(644, root,  man) /usr/man/man1/*
+%defattr(644,root,root,755)
+%doc {README,LICENSE}.gz
+%attr(755,root,root) /usr/bin/*
+/usr/man/man1/*
 /usr/share/psutils
 
 %changelog
+* Thu Apr 28 1999 Piotr Czerwiñski <pius@pld.org.pl>
+  [1.17-5]
+- added Group(pl),
+- fixed passing RPM_OPT_FLAGS,
+- back to gzipped man pages and documentation,
+- removed man group from man pages,
+- cosmetic changes for common l&f,
+- recompiled on rpm 3.
+
 * Mon Sep 07 1998 Ziemek Borowski <ziembor@faq-bot.ziembor.waw.pl>  
   [1.17-4]
 - added pl translation,
