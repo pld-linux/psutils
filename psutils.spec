@@ -2,7 +2,7 @@ Summary:	PostScript Utilities
 Summary(pl):	Narzêdzia do PostScriptu
 Name:		psutils
 Version:	1.17
-Release:	16
+Release:	17
 License:	distributable
 Group:		Applications/Printing
 Source0:	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
