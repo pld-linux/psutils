@@ -3,7 +3,7 @@ Summary(pl):	Narzêdzia do PostScriptu
 Name:		psutils
 Version:	1.17
 Release:	11
-License:	Distributable
+License:	distributable
 Group:		Applications/Printing
 Group(de):	Applikationen/Drucken
 Group(pl):	Aplikacje/Drukowanie
