@@ -2,7 +2,7 @@ Summary:	PostScript Utilities
 Summary(pl):	Narzêdzia do PostScriptu 
 Name:		psutils
 Version:	1.17
-Release:	5
+Release:	6
 Copyright:	non-free
 Group:		Utilities/Printing
 Group(pl):	Narzêdzia/Drukowanie
@@ -33,7 +33,10 @@ make -f Makefile.unix
  
 %install
 rm -rf $RPM_BUILD_ROOT
-make -f Makefile.unix DESTDIR=$RPM_BUILD_ROOT install
+make -f Makefile.unix \
+	DESTDIR=$RPM_BUILD_ROOT \
+	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
+	install
 
 gzip -9nf $RPM_BUILD_ROOT%{_mandir}/man1/* \
 	README LICENSE
@@ -46,40 +49,11 @@ rm -rf $RPM_BUILD_ROOT
 %doc {README,LICENSE}.gz
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
-%{_datadir}/psutils
+%{_datadir}/%{name}
 
 %changelog
-* Thu Apr 28 1999 Piotr Czerwiñski <pius@pld.org.pl>
-  [1.17-5]
-- added Group(pl),
-- fixed passing RPM_OPT_FLAGS,
-- back to gzipped man pages and documentation,
-- removed man group from man pages,
-- cosmetic changes for common l&f,
-- recompiled on rpm 3.
-
-* Mon Sep 07 1998 Ziemek Borowski <ziembor@faq-bot.ziembor.waw.pl>  
-  [1.17-4]
-- added pl translation,
-- more detailed %attr for binaries,
-- moved some files from /usr/lib/psutils to %{_datadir}/psutils.
-
-* Tue Jun 23 1998 Peter Soos <sp@osb.hu>
-  [1.17-3]
-- Using %attr for ability to rebuild the package as an ordinary user.
-
-* Wed Jun 04 1997 Timo Karjalainen <timok@iki.fi>
-  [1.17-2]
-- Reverted back to un-gzipped man-pages (Redhat style)
-- Added patch to compile everything cleanly
-- Some minor changes to specfile
-
-* Thu Mar 27 1997 Tomasz K³oczko <kloczek@rudy.mif.pg.gda.pl>
-  [1.17-1]
-- new version:
-  Patchlevel 17 had some minor bugfixes and improvements
-  - Trailer information now put before %%EOF comments if no %%Trailer
-  - psselect can now add blank pages.
-  - Piped input works in Linux
-  - spec file rewrited for using Buildroot,
-  - man pages gziped.
+* Wed Jun 2 1999 Piotr Czerwiñski <pius@pld.org.pl> 
+  [1.17-6]
+- package is FHS 2.0 compliant,
+- spec file written by PLD Team,
+- pl translation by Ziemek Borowski <ziembor@faq-bot.ziembor.waw.pl>.
