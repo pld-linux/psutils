@@ -50,10 +50,3 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_datadir}/%{name}
-
-%changelog
-* Wed Jun 2 1999 Piotr Czerwiñski <pius@pld.org.pl> 
-  [1.17-6]
-- package is FHS 2.0 compliant,
-- spec file written by PLD Team,
-- pl translation by Ziemek Borowski <ziembor@faq-bot.ziembor.waw.pl>.
