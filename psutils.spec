@@ -30,7 +30,7 @@ Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 %patch1 -p1
 
 %build
-%{__make} -f Makefile.unix
+%{__make} -f Makefile.unix OPT="%{?debug:-O -g}%{!?debug:$RPM_OPT_FLAGS}"
  
 %install
 rm -rf $RPM_BUILD_ROOT
