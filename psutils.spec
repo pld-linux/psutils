@@ -2,7 +2,7 @@ Summary:	PostScript Utilities
 Summary(pl):	Narzêdzia do PostScriptu 
 Name:		psutils
 Version:	1.17
-Release:	12
+Release:	14
 License:	distributable
 Group:		Applications/Printing
 Group(de):	Applikationen/Drucken
@@ -12,6 +12,7 @@ Source1:	%{name}-non-english-man-pages.tar.bz2
 Patch0:		%{name}-Makefile.patch
 # Patch1 derived from ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:		%{name}-misc.patch
+Patch2:		%{name}-paper.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -29,6 +30,7 @@ Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 %setup -q -n %{name}
 %patch0 -p1
 %patch1 -p1
+%patch2 -p1
 
 %build
 %{__make} -f Makefile.unix OPT="%{rpmcflags}"
