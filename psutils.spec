@@ -29,7 +29,7 @@ strony przeznacznone do wydruku, ich kolejno¶æ, uk³ad. Pozwala tak¿e na
 %patch1 -p1
 
 %build
-make -f Makefile.unix RPM_OPT_FLAGS="$RPM_OPT_FLAGS"
+make -f Makefile.unix
  
 %install
 rm -rf $RPM_BUILD_ROOT
