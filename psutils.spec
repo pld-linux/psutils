@@ -30,11 +30,11 @@ Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 %patch1 -p1
 
 %build
-make -f Makefile.unix
+%{__make} -f Makefile.unix
  
 %install
 rm -rf $RPM_BUILD_ROOT
-make -f Makefile.unix \
+%{__make} -f Makefile.unix \
 	DESTDIR=$RPM_BUILD_ROOT \
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1 \
 	install
