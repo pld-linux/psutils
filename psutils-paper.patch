@@ -195,8 +195,8 @@
  MANDIR = $(DESTDIR)/usr/man/man$(MANEXT)
  
  CC = gcc
--CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(RPM_OPT_FLAGS) -Wall
-+CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(RPM_OPT_FLAGS) $(LANGINFO_FLAG) -Wall
+-CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(OPT) -Wall
++CFLAGS = -DPAPER=\"$(PAPER)\" -DUNIX $(OPT) $(LANGINFO_FLAG) -Wall
  
  BIN = psbook psselect pstops epsffit psnup \
  	psresize
