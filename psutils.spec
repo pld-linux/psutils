@@ -6,7 +6,9 @@ Release:	15
 License:	distributable
 Group:		Applications/Printing
 Source0:	ftp://ftp.dcs.ed.ac.uk/pub/ajcd/%{name}-p17.tar.gz
+# Source0-md5: b161522f3bd1507655326afa7db4a0ad
 Source1:	%{name}-non-english-man-pages.tar.bz2
+# Source1-md5: 1e7a4663e9b535e102e6242ec1d5c875
 Patch0:		%{name}-Makefile.patch
 # Patch1 derived from ftp://jurix.jura.uni-sb.de/pub/linux/source/networking/printing/psutils.dif
 Patch1:		%{name}-misc.patch
