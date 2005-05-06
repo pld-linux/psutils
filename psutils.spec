@@ -33,7 +33,8 @@ Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
 %patch2 -p1
 
 %build
-%{__make} -f Makefile.unix OPT="%{rpmcflags}"
+%{__make} -f Makefile.unix \
+	OPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -42,7 +43,6 @@ rm -rf $RPM_BUILD_ROOT
 	MANDIR=$RPM_BUILD_ROOT%{_mandir}/man1
 
 bzip2 -dc %{SOURCE1} | tar xf - -C $RPM_BUILD_ROOT%{_mandir}
-
 
 %clean
 rm -rf $RPM_BUILD_ROOT
