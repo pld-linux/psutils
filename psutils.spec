@@ -1,5 +1,5 @@
 Summary:	PostScript Utilities
-Summary(pl):	Narzêdzia do PostScriptu
+Summary(pl.UTF-8):   NarzÄ™dzia do PostScriptu
 Name:		psutils
 Version:	1.17
 Release:	17
@@ -21,10 +21,10 @@ documents. Page selection and rearrangement are supported, including
 arrangement into signatures for booklet printing, and page merging for
 n-up printing.
 
-%description -l pl
-PSutils zawiera programy pomagaj±ce manipulowaæ plikami PostScript,
-wybieraæ strony przeznaczone do wydruku, ich kolejno¶æ, uk³ad.
-Pozwala tak¿e na ³±czenie ró¿nych plików PostScript w ca³o¶æ.
+%description -l pl.UTF-8
+PSutils zawiera programy pomagajÄ…ce manipulowaÄ‡ plikami PostScript,
+wybieraÄ‡ strony przeznaczone do wydruku, ich kolejnoÅ›Ä‡, ukÅ‚ad.
+Pozwala takÅ¼e na Å‚Ä…czenie rÃ³Å¼nych plikÃ³w PostScript w caÅ‚oÅ›Ä‡.
 
 %prep
 %setup -q -n %{name}
