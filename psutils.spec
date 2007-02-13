@@ -1,5 +1,5 @@
 Summary:	PostScript Utilities
-Summary(pl.UTF-8):   Narzędzia do PostScriptu
+Summary(pl.UTF-8):	Narzędzia do PostScriptu
 Name:		psutils
 Version:	1.17
 Release:	17
